@@ -1,16 +1,17 @@
-import { BrowserRouter } from 'react-router-dom/dist';
+// import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-// import Configuracoes from './components/buttons/settings/config';
 import HomePage from './pages/home/home';
-import Rota from '../../front/src/rotas/routes';
+// import Login from './pages/logins/login';
+// import Rota from '../../front/src/rotas/routes';
 
 function App() {
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Rota/>
-    </BrowserRouter>
-      {/* <Configuracoes/> */}
+    </BrowserRouter> */}
+    <HomePage/>
+
     </>
   );
 }

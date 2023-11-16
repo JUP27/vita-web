@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Sair = styled.button`
-    align-content: left; 
+    align-content: right; 
+    justify-content: right;
     width: 49px;
     height: 42px;
     border: none; 

@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Caminhos, Logo, Nav } from "./styleHeader";
 
@@ -21,8 +20,8 @@ function Header() {
         navigate("/profile")
     }
 
-    function goForm() {
-        navigate("/formulário")
+    function goOrient() {
+        navigate("/orientação")
     }
 
     return(
@@ -31,7 +30,7 @@ function Header() {
                 <Logo/>
                 <Caminhos>
                     <a onClick={goHome}>Home</a>
-                    <a onClick={goForm}>Formulário</a>
+                    <a onClick={goOrient}>Formulário</a>
                     <a onClick={goRanking}>Ranking</a>
                     <a onClick={goProfile}>Perfil</a>
                     <a onClick={goAbout}>Sobre</a>

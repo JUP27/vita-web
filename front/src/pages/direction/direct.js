@@ -1,8 +1,8 @@
 import { Title } from "../about/styleAbout";
-import { Astronauta, Fundo } from "./styledForm";
+import { Astronauta, Fundo } from "./styledDirect";
 import lost from "../../assets/astronaut-lost.png"
 
-function Formulario() {
+function Orientacao() {
     return(
         <>
            <Fundo>
@@ -13,4 +13,4 @@ function Formulario() {
     )
 }
 
-export default Formulario; 
+export default Orientacao; 

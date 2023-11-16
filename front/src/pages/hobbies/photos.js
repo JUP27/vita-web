@@ -1,34 +1,28 @@
-import { Fundo, PhotosArea, DivText, TextArea } from "./photosStyled";
-import PhotoAlbum from "react-photo-album";
+import { Fundo, PhotosArea, DivText, TextArea, Linha3, Photo } from "./photosStyled";
 import ActionButtons from "../../components/actions/group";
-// import pescaria from '../../assets/pescar.png';
-// import observar from '../../assets/telescopio.jpg';
-
-
-const photos = [
-    {
-        src: '../../assets/pescar.png',
-        width: 800,
-        height: 600
-    },
-    {
-        src: '../../assets/telescopio.jpg',
-        width: 1600,
-        height: 900
-    }
-];
+import basquete from '../../assets/basquete.png'
+import pescar from '../../assets/pescar.png'
 
 function Ranking() {
-    const navegar = useNavigate();
+    // const navegar = useNavigate();
 
-    function goDescript() {
-        navegar("/descrição")
-    }
+    // function goDescript() {
+    //     navegar("/descrição")
+    // }
 
     return(
         <Fundo>
             <PhotosArea>
-                <PhotoAlbum layout="column" photos={photos} onClick={goDescript}/>
+                <Linha3>
+                    <Photo src={basquete}/>
+                    <Photo src={pescar}/>
+                    <Photo/>
+                </Linha3>
+                <Linha3>
+                    <Photo/>
+                    <Photo/>
+                    <Photo/>
+                </Linha3>
             </PhotosArea>
             <TextArea>
                 <DivText>

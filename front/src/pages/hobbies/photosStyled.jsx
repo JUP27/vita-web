@@ -15,10 +15,18 @@ export const PhotosArea = styled.div`
     height: 92.5vh;
 
 `
+export const Linha3 = styled.div`
+    display: grid;
+    flex-direction: row;
+    max-width: 69vw;
+`
+// export const Linha6 = styled.div`
+//     display: flex;
+//     flex-direction: row;
+// `
 export const Photo = styled.img`
-    position: fixed;
     width: 312px;
-    height: 512px;
+    height: 455px;
 
 `
 export const TextArea = styled.div`

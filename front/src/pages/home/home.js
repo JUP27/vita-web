@@ -1,14 +1,21 @@
-import Header from "../../components/header/header";
+// import Header from "../../components/header/header";
 import astronauta from '../../assets/astronaut_jump.png'
-import { Astronauta } from "../forms/styledForm";
 // import estrelas from "../../assets/observar.png"
-import { Buttons, Direita, Fundo, Present, Question, SmallTitle } from "./styledHome";
+import { Buttons, Fundo, Present, Question, SmallTitle } from "./styledHome";
 import Purple from "../../components/buttons/purple/principal";
+import { Astronauta } from "../direction/styledDirect";
+// import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+    // const navegar = useNavigate();
+
+    // function goLogin() {
+    //     navegar('/login')
+    // }
+
     return(
      <>
-        <Header/>
+        {/* <Header/> */}
         <Fundo>
             <Present>
                 <SmallTitle>Opa querido!</SmallTitle>
@@ -21,7 +28,7 @@ function HomePage() {
                             nos difentes hobbies espalhados pelo mundão
                     </SmallTitle>
                     <Buttons>
-                        <Purple CTA={"RANKING"}/>
+                        {/* <Purple onClick={goLogin} CTA={"RANKING"}/> */}
                         <Purple CTA={"FORMULÁRIO"}/>
                         <Purple CTA={"LOGIN"}/>
                        

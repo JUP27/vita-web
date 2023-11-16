@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Grupo = styled.div`
     display: flex;
@@ -9,3 +9,4 @@ export const Grupo = styled.div`
     height: 10vh;
     background-color: transparent;
 `
+
