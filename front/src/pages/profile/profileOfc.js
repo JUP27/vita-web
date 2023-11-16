@@ -1,7 +1,7 @@
 function Perfil() {
     return(
         <>
-            PÁGIAN EM CONSTRUÇÃO!
+            PÁGINA EM CONSTRUÇÃO!
         </>
     )
 };
