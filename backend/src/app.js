@@ -21,6 +21,6 @@ app.use('/api', userRouter);
 app.use('/api/auth', loginRouter);
 app.use('/api', commentRouter);
 // Setar a porta do servidor, a parir do arquivo .env
-app.set('port', process.env.PORT || 3333);
+app.set('port', process.env.PORT || 3000);
 
 module.exports = app;
