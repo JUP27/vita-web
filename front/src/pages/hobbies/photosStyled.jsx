@@ -7,43 +7,47 @@ export const Fundo = styled.div`
     justify-content: space-between;
     background: #000;
     color: #fff;
+    height: 90.5vh;
+
 `
 export const PhotosArea = styled.div`
     display: flex; 
     flex-direction: row;
-    width: 70vw;
-    height: 92.5vh;
+    justify-content: flex-start;
 
 `
-export const Linha3 = styled.div`
+export const Linha2 = styled.div`
     display: grid;
-    flex-direction: row;
-    max-width: 69vw;
+    flex-direction: column;
+  
 `
-// export const Linha6 = styled.div`
-//     display: flex;
-//     flex-direction: row;
-// `
-export const Photo = styled.img`
-    width: 312px;
-    height: 455px;
 
+export const Photo = styled.img`
+    width: 242px;
+    height: 333px;
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+    Photo:hover{
+        -webkit-filter: blur(0);
+	    filter: blur(0);
+    }
 `
 export const TextArea = styled.div`
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: 92.5vh;
-    padding: 30px;
     align-items: center;
+    padding: 90px 190px 0px 0px;
+    width: 30vw;
+   
 `
 
 export const DivText = styled.div`
-    /* color: #FFF; */
     text-align: center;
     font-family: Livvic;
     font-size: 28px;
-    
     
     h2{
         font-size: 60px;

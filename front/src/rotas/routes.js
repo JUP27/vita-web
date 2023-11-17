@@ -6,6 +6,8 @@ import Perfil from "../pages/profile/profileOfc";
 import VerPerfil from "../pages/profile/viewprofile/view";
 import Descricao from "../pages/hobbies/descriptions/abstract";
 import Orientacao from "../pages/direction/direct";
+import { SearchBar } from "../components/search/searchBar";
+import Comentar from "../components/comment/rating/rate";
 
 function Rota() {
     return(
@@ -17,6 +19,8 @@ function Rota() {
                 <Route path='/visualizar' element={<VerPerfil/>}/>
                 <Route path="/descrição" element={<Descricao/>}/>
                 <Route path='/orientação' element={<Orientacao/>}/>
+                <Route path='/search' element={<SearchBar/>}/>
+                <Route path='/comment' element={<Comentar/>}/>
             </Routes>
     )
 };

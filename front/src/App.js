@@ -1,17 +1,15 @@
-// import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import HomePage from './pages/home/home';
-// import Login from './pages/logins/login';
+// import { BrowserRouter } from 'react-router-dom';
 // import Rota from '../../front/src/rotas/routes';
+import Orientacao from './pages/direction/direct';
 
 function App() {
   return (
     <>
-    {/* <BrowserRouter>
-      <Rota/>
-    </BrowserRouter> */}
-    <HomePage/>
-
+      {/* <BrowserRouter>
+        <Rota/>
+      </BrowserRouter> */}
+      <Orientacao/>
     </>
   );
 }

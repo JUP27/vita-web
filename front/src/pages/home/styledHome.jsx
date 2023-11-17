@@ -19,7 +19,6 @@ export const Present = styled.div`
 
 `
 
-
 export const SmallTitle = styled.div`
     word-break: normal; 
     align-items: left; 
@@ -47,4 +46,5 @@ export const Buttons = styled.div`
     width: 42vw;
     height: 12vh;
     background-color: transparent;
+    gap: 20px;
 `

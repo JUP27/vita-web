@@ -2,7 +2,9 @@ import { Botao } from "./stylePurple";
 
 function Purple({CTA}) {
     return(
-        <Botao>{CTA}</Botao>
+        <Botao>
+            <a>{CTA}</a>
+        </Botao>
     )
 }
 

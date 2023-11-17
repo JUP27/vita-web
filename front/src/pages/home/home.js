@@ -5,6 +5,7 @@ import { Buttons, Fundo, Present, Question, SmallTitle } from "./styledHome";
 import Purple from "../../components/buttons/purple/principal";
 import { Astronauta } from "../direction/styledDirect";
 // import { useNavigate } from "react-router-dom";
+// onClick={goLogin}
 
 function HomePage() {
     // const navegar = useNavigate();
@@ -28,7 +29,7 @@ function HomePage() {
                             nos difentes hobbies espalhados pelo mundão
                     </SmallTitle>
                     <Buttons>
-                        {/* <Purple onClick={goLogin} CTA={"RANKING"}/> */}
+                        <Purple  CTA={"RANKING"}/>
                         <Purple CTA={"FORMULÁRIO"}/>
                         <Purple CTA={"LOGIN"}/>
                        
