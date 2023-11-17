@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Fundo = styled.div`
     display: flex; 
@@ -22,6 +22,10 @@ export const Esquerda = styled.div`
 `
 
 export const Title = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     text-align: left; 
     color: #FFF;
     font-family: Levvic;

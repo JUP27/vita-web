@@ -1,5 +1,5 @@
 import { Direita, Esquerda, Foto, Fundo, Text, Title } from "./styleAbout";
-import perfil from '../../assets/Perfil.png';
+import perfil from "../../assets/Perfil.png";
 import Header from "../../components/header/header";
 
 function Sobre() {

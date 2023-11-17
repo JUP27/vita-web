@@ -2,12 +2,19 @@ import styled from "styled-components"
 
 export const Fundo = styled.div`
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center; 
     justify-content: space-around; 
     background: #000; 
     height: 100vh;
 `
+export const Sessao1 = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-around; 
+`
+
 export const Resumo = styled.div`
     display: flex;
     flex-direction: column;
@@ -16,6 +23,7 @@ export const Resumo = styled.div`
 `
 
 export const Icons = styled.button`
+    color: #fff;
     align-items: center; 
     padding: 2px; 
     width: 32px;
