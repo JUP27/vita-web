@@ -5,8 +5,8 @@ function Comentarios() {
     return(
         <Coment>
             <User>
-                @nome_usuário
                 <UserFoto src={userft}/>
+                @nome_usuário
             </User>
             <UserComt>Exemplo de comentário</UserComt>
             <UserStar/>

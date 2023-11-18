@@ -1,22 +1,22 @@
-// import Header from "../../components/header/header";
+import Header from "../../components/header/header";
 import astronauta from '../../assets/astronaut_jump.png'
 // import estrelas from "../../assets/observar.png"
 import { Buttons, Fundo, Present, Question, SmallTitle } from "./styledHome";
 import Purple from "../../components/buttons/purple/principal";
 import { Astronauta } from "../direction/styledDirect";
-// import { useNavigate } from "react-router-dom";
-// onClick={goLogin}
+import { useNavigate } from "react-router-dom";
+
 
 function HomePage() {
-    // const navegar = useNavigate();
+    const navegar = useNavigate();
 
-    // function goLogin() {
-    //     navegar('/login')
-    // }
+    function goLogin() {
+        navegar('/login')
+    }
 
     return(
      <>
-        {/* <Header/> */}
+        <Header/>
         <Fundo>
             <Present>
                 <SmallTitle>Opa querido!</SmallTitle>
@@ -30,8 +30,8 @@ function HomePage() {
                     </SmallTitle>
                     <Buttons>
                         <Purple  CTA={"RANKING"}/>
-                        <Purple CTA={"FORMULÁRIO"}/>
-                        <Purple CTA={"LOGIN"}/>
+                        <Purple CTA={"ORIENTAÇÃO"}/>
+                        <Purple CTA={"LOGIN"} onClick={goLogin}/>
                        
                     </Buttons>
             </Present>
