@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useForm } from './useForm';
+import { useForm } from './useForms';
 import {api} from '../services/api'
 
 export const useData = (initialForm, path) => {

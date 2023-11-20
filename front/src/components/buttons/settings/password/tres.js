@@ -5,7 +5,7 @@ function Chave() {
     return(
         <>
             <BotaoConfig>
-                <img src={key}/>
+                <img src={key} alt="Icone de chave"/>
             </BotaoConfig>
         </>
         

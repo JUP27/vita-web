@@ -5,7 +5,7 @@ import localizacao from "../../../../assets/local.svg";
 function Local() {
     return(
         <Middle>
-            <img src={localizacao}/>
+            <img src={localizacao} alt="Pin de localização"/>
         </Middle>
     )
 }

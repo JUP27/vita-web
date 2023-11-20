@@ -5,14 +5,22 @@ import { Buttons, Fundo, Present, Question, SmallTitle } from "./styledHome";
 import Purple from "../../components/buttons/purple/principal";
 import { Astronauta } from "../direction/styledDirect";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 
 function HomePage() {
-    const navegar = useNavigate();
+    const navigate = useNavigate();
 
     function goLogin() {
-        navegar('/login')
+        navigate('/login')
     }
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            navigate('/');
+        }
+    }, [navigate]);
 
     return(
      <>

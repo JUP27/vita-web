@@ -4,7 +4,7 @@ import lapis from "../../../../assets/pencil.svg";
 function Lapis() {
     return(
         <Config>
-            <img src={lapis}/>
+            <img src={lapis} alt="Icone de lápis"/>
         </Config>
     )
 }

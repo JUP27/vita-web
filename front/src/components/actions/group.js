@@ -15,6 +15,10 @@ function ActionButtons() {
     navegar(-1)
   } 
 
+  const goSearch = () => {
+    navegar('/search')
+  }
+
 
   return (
     <Fundo>
@@ -29,7 +33,7 @@ function ActionButtons() {
             <Icon src={adicionar}/>
           </ButtonAdd>
         </Fab>
-        <Fab disabled aria-label="search">
+        <Fab disabled aria-label="search" onClick={goSearch}>
           <ButtonSearch>
             <Icon src={pesquisa}/>
           </ButtonSearch>

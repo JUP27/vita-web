@@ -4,6 +4,12 @@ import { Card, Card2, Fundo, Texto } from "./styleThank";
 import background from '../../assets/local.svg'
 
 function ThankYouPage() {
+    const navegacao = useNavigate();
+
+    const goBack = () => {
+        navegacao(-1)
+      } 
+
     return(
         <Fundo src={background}>
             <Card>
@@ -13,7 +19,7 @@ function ThankYouPage() {
                 <Texto>
                     Suas respostas foram salvas com sucesso!
                 </Texto>
-                <Purple CTA={'OK'}/>
+                <Purple CTA={'OK'} onClick={goBack}/>
             </Card>
         </Fundo>
     )
