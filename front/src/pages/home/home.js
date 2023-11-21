@@ -1,26 +1,18 @@
 import Header from "../../components/header/header";
 import astronauta from '../../assets/astronaut_jump.png'
-// import estrelas from "../../assets/observar.png"
-import { Buttons, Fundo, Present, Question, SmallTitle } from "./styledHome";
-import Purple from "../../components/buttons/purple/principal";
+import { Buttons, Fundo, Present, Purple, Question, SmallTitle } from "./styledHome";
 import { Astronauta } from "../direction/styledDirect";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+
 
 
 function HomePage() {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     function goLogin() {
         navigate('/login')
     }
 
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            navigate('/');
-        }
-    }, [navigate]);
 
     return(
      <>
@@ -37,9 +29,9 @@ function HomePage() {
                             nos difentes hobbies espalhados pelo mundão
                     </SmallTitle>
                     <Buttons>
-                        <Purple  CTA={"RANKING"}/>
-                        <Purple CTA={"ORIENTAÇÃO"}/>
-                        <Purple CTA={"LOGIN"} onClick={goLogin}/>
+                        <Purple>RANKING</Purple>
+                        <Purple>ORIENTAÇÃO</Purple>
+                        <Purple onClick={goLogin}>LOGIN</Purple>
                        
                     </Buttons>
             </Present>

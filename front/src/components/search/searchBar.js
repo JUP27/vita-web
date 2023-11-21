@@ -1,23 +1,11 @@
 import React, {useState} from "react";
 import search from '../../assets/search-icon.svg'
 import { Barra, Fundo, Icone, Resultados } from "./styled";
-import {Input} from "@mui/material"
-import {Drawer,DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-  } from '@chakra-ui/react'
+import {Button, Input} from "@mui/material"
+import {Drawer,DrawerBody, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure} from '@chakra-ui/react'
+import { ButtonSearch, Icon } from "../actions/groupStyled";
+import pesquisa from "../../assets/Seacrch.svg";
 
-// const hobies = [
-//     'basquete',
-//     'volêi',
-//     'pescaria',
-//     'basquete aquatico',
-//     'volêi de praia',
-//     'pescaria selvagem'
-// ]; 
 
 // const category = 'general'
 // $.ajax({
@@ -41,7 +29,8 @@ function SearchBar({setResults}) {
     const [busca, setBusca] = useState("");
     
     const Buscando = (value) => {
-        fetch('https://api.api-ninjas.com/v1/hobbies?category=' + category)
+        // fetch('https://api.api-ninjas.com/v1/hobbies?category='+ category)
+        fetch('https://api.api-ninjas.com/v1/hobbies?category=')
         .then((response) => response.json())
         .then((json) => {
             const results = json.filter((hobby) => {
@@ -63,11 +52,15 @@ function SearchBar({setResults}) {
 
     return(
         <Fundo>
-            <Button colorScheme='purple' onClick={onOpen}>
-                Open
+            <Button onClick={onOpen}>
+                <ButtonSearch>
+                    <Icon src={pesquisa}/>
+                </ButtonSearch>
             </Button>
             <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+                <DrawerOverlay/>
                 <DrawerContent>
+                    <DrawerCloseButton/>
                     <DrawerBody>
                         <Barra>
                             <Icone src={search} alt="Icone de lupa, indicando busca"/>

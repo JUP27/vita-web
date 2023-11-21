@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Fundo, PhotosArea, DivText, TextArea, Linha2, Photo } from "./photosStyled";
+import { Fundo, PhotosArea, DivText, TextArea, Linha2, Photo, Atividade} from "./photosStyled";
 import basquete from '../../assets/basquete.png'
 import pescar from '../../assets/pescar.png'
 import plantar from '../../assets/plantar.png'
@@ -7,17 +7,18 @@ import bola from '../../assets/futebol.png'
 import ler from '../../assets/ler.png'
 import observar from '../../assets/observar.png'
 import Header from "../../components/header/header";
-import { SearchBar } from "../../components/search/searchBar";
-import ListaDeResultados from "../../components/search/searchResults";
+import  SearchBar  from "../../components/search/searchBar";
+// import ListaDeResultados from "../../components/search/searchResults";
+// import { useState } from "react";
 
 function Ranking() {
-    const navegar = useNavigate();
+    const navigate = useNavigate();
 
     function goDescript() {
-        navegar("/descrição")
+        navigate("/descricao")
     }
 
-    const [results, setResults] = useState([])
+    // const [results, setResults] = useState([])
 
 
     return(
@@ -26,16 +27,28 @@ function Ranking() {
             <Fundo>
                 <PhotosArea>
                     <Linha2>
-                        <Photo src={basquete}  onClick={goDescript}/>
-                        <Photo src={observar}  onClick={goDescript}/>
+                        <Atividade>
+                            <Photo src={basquete}  onClick={goDescript}/>
+                        </Atividade>
+                        <Atividade>
+                            <Photo src={observar}  onClick={goDescript}/>
+                        </Atividade>
                     </Linha2>
                     <Linha2>
-                        <Photo  src={pescar}  onClick={goDescript}/>
-                        <Photo src={plantar}  onClick={goDescript}/>
+                        <Atividade>
+                            <Photo  src={pescar}  onClick={goDescript}/>
+                        </Atividade>
+                        <Atividade>
+                            <Photo src={plantar}  onClick={goDescript}/>
+                        </Atividade>
                     </Linha2>
                     <Linha2>
-                        <Photo src={bola}  onClick={goDescript}/>
-                        <Photo src={ler}  onClick={goDescript}/>
+                        <Atividade>
+                            <Photo src={bola}  onClick={goDescript}/>
+                        </Atividade>
+                        <Atividade>
+                            <Photo src={ler}  onClick={goDescript}/>
+                        </Atividade>
                     </Linha2>
                 </PhotosArea>
                 <TextArea>
@@ -43,8 +56,7 @@ function Ranking() {
                         <h2>Ranking</h2>
                         <p>Veja o que andam comentando sobre o top 6 de nossos hobbies</p>
                     </DivText>
-                    <SearchBar setResults={setResults}/>
-                    <ListaDeResultados/>
+                    <SearchBar/>
                 </TextArea>
             </Fundo>
         </>
@@ -52,3 +64,5 @@ function Ranking() {
 }
 
 export default Ranking; 
+
+// setResults={setResults}

@@ -10,7 +10,7 @@ export const useTokenNotNull = () =>{
         const token = localStorage.getItem('token'); 
         // const token = window.localStorage.getItem('token'); 
         if(token !== null){
-            navigate('/home')
+            navigate('/')
         }
     },[])
 }

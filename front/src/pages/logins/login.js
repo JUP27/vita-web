@@ -3,23 +3,24 @@ import { Card, Fundo, Titulo, FormHelperText, FormHelperText2, FormControl} from
 import { Input } from '@chakra-ui/react'
 import Saida from "../../components/buttons/exit/sair";
 import Entrar from "../../components/buttons/send/sendButton";
+import { useState } from "react";
 
 function Login() {
-    const navegacao = useNavigate();
+    const navigate = useNavigate();
 
     function goCadastro() {
-        navegacao('/cadastro')
+        navigate('/cadastro')
     }
 
     function goHome() {
-      navegacao("index")
+      navigate("/")
   }
 
     const goBack = () => {
-        navegacao(-1)
+        navigate(-1)
       } 
 
-    // const [username, setUsername] = useState('');
+    const [username, setUsername] = useState('');
     
     return(
         <Fundo>

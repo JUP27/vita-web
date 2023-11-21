@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { Caminhos, Logo, Nav } from "./styleHeader";
+import { Caminhos, Logo, Nav, Navegar } from "./styleHeader";
+import myLogo from '../../assets/logo-vitta.svg'
 
 function Header() {
     const navigate = useNavigate();
 
     function goAbout() {
-        navigate("/about")
+        navigate("/sobre")
     }
 
     function goHome() {
-        navigate("index")
+        navigate("/")
     }
 
     function goRanking() {
@@ -21,19 +22,19 @@ function Header() {
     }
 
     function goOrient() {
-        navigate("/orientação")
+        navigate("/orientacao")
     }
 
     return(
         <>
             <Nav>
-                <Logo/>
+                <Logo src={myLogo}/>
                 <Caminhos>
-                    <a href="home.js" onClick={goHome}>Home</a>
-                    <a href="direct.js" onClick={goOrient}>orientação</a>
-                    <a href="photo.js" onClick={goRanking}>Ranking</a>
-                    <a href="profileOfc.js" onClick={goProfile}>Perfil</a>
-                    <a href="about.js" onClick={goAbout}>Sobre</a>
+                    <Navegar onClick={goHome}>Home</Navegar>
+                    <Navegar onClick={goOrient}>Orientação</Navegar>
+                    <Navegar onClick={goRanking}>Ranking</Navegar>
+                    <Navegar onClick={goProfile}>Perfil</Navegar>
+                    <Navegar onClick={goAbout}>Sobre</Navegar>
                 </Caminhos>
             </Nav>
         </>

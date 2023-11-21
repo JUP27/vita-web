@@ -28,8 +28,11 @@ export const Title = styled.div`
     align-items: center;
     text-align: left; 
     color: #FFF;
+    border-bottom: 2px solid #C670E9;
+    /* border-height: max-content; */
     font-family: Levvic;
     font-size: 42px;
+    gap: 10px;
 
 `
 

@@ -23,8 +23,8 @@ function ActionButtons() {
   return (
     <Fundo>
       <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <Fab disabled aria-label="back">
-          <ButtonBack onClick={goBack}>
+        <Fab disabled aria-label="back" onClick={goBack}>
+          <ButtonBack>
             <Icon src={voltar}/>
           </ButtonBack>
         </Fab>

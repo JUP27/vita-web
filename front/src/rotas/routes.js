@@ -1,33 +1,32 @@
-// import { Routes, Route } from "react-router-dom";
-import { Route, Routes } from 'react-router-dom';
-import HomePage from "../pages/home/home.js";
-import Sobre from "../pages/about/about.js";
-import Ranking from '../pages/hobbies/photos.js'
-import Perfil from "../pages/profile/profileOfc.js";
-import VerPerfil from "../pages/profile/viewprofile/view.js";
-import Descricao from "../pages/hobbies/descriptions/abstract.js";
-import Orientacao from "../pages/direction/direct.js";
-import { SearchBar } from "../components/search/searchBar.js";
-import Comentar from "../components/comment/rating/rate.js";
-import Cadastro from "../pages/logins/cadastro.js";
-import Login from "../pages/logins/login.js";
+import Sobre from "../pages/about/about";
+import Ranking from '../pages/hobbies/photos'
+import Perfil from "../pages/profile/profileOfc";
+import VerPerfil from "../pages/profile/viewprofile/view";
+import Descricao from "../pages/hobbies/descriptions/abstract";
+import Orientacao from "../pages/direction/direct";
+import Cadastro from "../pages/logins/cadastro";
+import Login from "../pages/logins/login";
+import HomePage from '../pages/home/home';
+import {BrowserRouter,Route, Routes } from "react-router-dom";
 
 function Rota() {
-    return(
-        <Routes>
-            <Route path="/" element={<HomePage/>}/>
+    return (
+       <BrowserRouter>
+            <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
             <Route path="sobre" element={<Sobre/>}/>
             <Route path="ranking" element={<Ranking/>}/>
             <Route path="perfil" element={<Perfil/>}/>
             <Route path="verperfil" element={<VerPerfil/>}/>
-            <Route path="descrição" element={<Descricao/>}/>
-            <Route path="orientação" element={<Orientacao/>}/>
-            <Route path="search" element={<SearchBar/>}/>
-            <Route path="comentar" element={<Comentar/>}/>
+            <Route path="descricao" element={<Descricao/>}/>
+            <Route path="orientacao" element={<Orientacao/>}/>
             <Route path="cadastro" element={<Cadastro/>}/>
-            <Route path="login" element={<Login/>}/>
         </Routes>
+       </BrowserRouter>
+
+       
     )
 };
 
-export default Rota; 
+export default Rota;
