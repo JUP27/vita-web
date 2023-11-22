@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import search from '../../assets/search-icon.svg'
 import { Barra, Fundo, Icone, Resultados } from "./styled";
 import {Button, Input} from "@mui/material"
-import { ButtonSearch, Icon } from "../actions/groupStyled";
-import pesquisa from "../../assets/Seacrch.svg";
 
 // const category = 'general'
 // $.ajax({
@@ -20,39 +18,37 @@ import pesquisa from "../../assets/Seacrch.svg";
 // });
 
 
-function SearchBar({setResults}) {
+function SearchBar() {
 
     const [busca, setBusca] = useState("");
     
-    const Buscando = (value) => {
-        fetch(`https://api.api-ninjas.com/v1/hobbies?category= + category`)
+    const fetchData = (value) => {
+        fetch('https://jsonplaceholder.org/posts')
         .then((response) => response.json())
         .then((json) => {
-            const results = busca.filter((hobby) => {
+            const results = json.filter((posts) => {
                 return(
                     value &&
-                    hobby &&
-                    hobby.busca.toLowerCase().includes(value)
+                    posts &&
+                    posts.busca.toLowerCase().includes(value)
                 );  
             });
-            setResults(results)
+            console.log(results);
         });
     };
 
+   
+    // setResults(results)
+   
     const handleChange = (value) => {
         setBusca(value);
-        Buscando(value);
+        fetchData(value);
     }
 
     
 
     return(
         <Fundo>
-            <Button>
-                <ButtonSearch>
-                    <Icon src={pesquisa}/>
-                </ButtonSearch>
-            </Button>
             <Barra>
                 <Icone src={search} alt="Icone de lupa, indicando busca"/>
                 <Input placeholder="Qual hobby você procura?"

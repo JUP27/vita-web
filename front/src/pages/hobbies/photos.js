@@ -7,7 +7,7 @@ import bola from '../../assets/futebol.png'
 import ler from '../../assets/ler.png'
 import observar from '../../assets/observar.png'
 import Header from "../../components/header/header";
-import  SearchBar  from "../../components/search/searchBar";
+// import  SearchBar  from "../../components/search/searchBar";
 // import ListaDeResultados from "../../components/search/searchResults";
 // import { useState } from "react";
 
@@ -56,7 +56,7 @@ function Ranking() {
                         <h2>Ranking</h2>
                         <p>Veja o que andam comentando sobre o top 6 de nossos hobbies</p>
                     </DivText>
-                    <SearchBar/>
+                    {/* <SearchBar/> */}
                 </TextArea>
             </Fundo>
         </>

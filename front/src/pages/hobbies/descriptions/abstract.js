@@ -1,4 +1,3 @@
-import ActionButtons from "../../../components/actions/group";
 import Comentarios from "../../../components/comment/showcomment/show";
 import Header from "../../../components/header/header";
 import { DivText } from "../photosStyled";
@@ -36,7 +35,6 @@ function Descricao(){
                 <Titles>Experiência dos outros usuários</Titles>
                 <FooterComentario>
                     <Comentarios/>
-                    <ActionButtons/>
                 </FooterComentario>
             </Display>
         </>
