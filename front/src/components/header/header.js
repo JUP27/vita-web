@@ -18,7 +18,7 @@ function Header() {
     }
 
     function goProfile() {
-        navigate("/profile")
+        navigate("/perfil")
     }
 
     function goOrient() {

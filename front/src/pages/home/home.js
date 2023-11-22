@@ -13,6 +13,13 @@ function HomePage() {
         navigate('/login')
     }
 
+    function goOrient() {
+        navigate("/orientacao")
+    }
+
+    function goRanking() {
+        navigate("/ranking")
+    }
 
     return(
      <>
@@ -29,8 +36,8 @@ function HomePage() {
                             nos difentes hobbies espalhados pelo mundão
                     </SmallTitle>
                     <Buttons>
-                        <Purple>RANKING</Purple>
-                        <Purple>ORIENTAÇÃO</Purple>
+                        <Purple onClick={goRanking}>RANKING</Purple>
+                        <Purple onClick={goOrient}>ORIENTAÇÃO</Purple>
                         <Purple onClick={goLogin}>LOGIN</Purple>
                        
                     </Buttons>

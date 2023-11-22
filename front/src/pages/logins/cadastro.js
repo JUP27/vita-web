@@ -1,10 +1,10 @@
-import { Input } from "@chakra-ui/react";
-import Saida from "../../components/buttons/exit/sair";
-import Entrar from "../../components/buttons/send/sendButton";
 import { Campos } from "./styledCadastro";
-import { Card, FormControl, Fundo, Titulo } from "./styledLog";
+import { Card, Display, Entrar, FormControl, Sair, Sair2, Titulo } from "./styledLog";
 import { useData } from "../../hooks/useData";
 import { useTokenNotNull } from "../../hooks/useTokenNotNull";
+import bye from "../../assets/exit.svg"
+import { TextField } from "@mui/material";
+
 
 function Cadastro() {
     const {form, onChangeForm, handleSubmit, message} = useData({username:'', password:'', email:'', estado:'', idade:'', hobby:''},'/user/cadastro');
@@ -12,52 +12,54 @@ function Cadastro() {
     useTokenNotNull();
 
     return (
-        <Fundo>
+        <Display>
         <Card>
-            <Saida/>
+            <Sair>
+                <Sair2 src={bye}/>
+            </Sair>
             <FormControl onSubmit={handleSubmit}>
                 <Titulo>Cadastro</Titulo>
                 <Campos>
-                    <Input type="email" 
-                        placeholder="E-mail"
+                    <TextField  id="outlined-basic" 
+                        label="Email" variant="outlined"
                         value={form.email}
                         onChange={onChangeForm}
                     />
-                    <Input type="password" 
-                        placeholder="Senha"
+                    <TextField  id="outlined-basic" 
+                        label="Senha" variant="outlined"
                         value={form.password}
                         onChange={onChangeForm}
                     />
-                    <Input type="input" 
-                        placeholder="Estado"
+                    <TextField  id="outlined-basic" 
+                        label="Estado" variant="outlined" 
                         value={form.estado}
                         onChange={onChangeForm}
                     />
                 </Campos>
                 <Campos>
-                    <Input type="input" 
-                        placeholder="Nome" 
+                    <TextField  id="outlined-basic" 
+                        label="Nome" variant="outlined"
                         value={form.username}
                         onChange={onChangeForm}
                     />
-                    <Input type="input" 
-                        placeholder="Idade"
+                    <TextField  id="outlined-basic" 
+                        label="Idade" variant="outlined" 
                         value={form.idade}
                         onChange={onChangeForm}
                     />
-                    <Input type="input" 
-                        placeholder="Hobby Atual"
+                    <TextField  id="outlined-basic" 
+                        label="Hobby Atual" variant="outlined"
                         value={form.hobby}
                         onChange={onChangeForm}
                     />
                     {message &&  <p>{message} </p>}
                 </Campos>
-                <Entrar mensage={"Salvar"}/>
+                <Entrar type="submit">Salvar</Entrar>
             </FormControl>
 
             {}
         </Card>
-    </Fundo>
+    </Display>
     )
 
 }

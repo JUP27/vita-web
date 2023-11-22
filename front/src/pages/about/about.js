@@ -1,4 +1,4 @@
-import { Direita, Esquerda, Foto, Fundo, Text, Title } from "./styleAbout";
+import { Direita, Display, Esquerda, Foto, Text, Title } from "./styleAbout";
 import perfil from "../../assets/Perfil.png";
 import Header from "../../components/header/header";
 
@@ -6,7 +6,7 @@ function Sobre() {
     return(
         <>
             <Header/>
-            <Fundo>
+            <Display>
                 <Direita>
                     <Foto src={perfil}/>
                 </Direita>
@@ -22,7 +22,7 @@ function Sobre() {
                         hábitos que incentivem a criação de novas conexões e descubram novas paixões. 
                     </Text>
                 </Esquerda>
-            </Fundo>
+            </Display>
         </>
     )
 }

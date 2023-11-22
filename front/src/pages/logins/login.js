@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { Card, Fundo, Titulo, FormHelperText, FormHelperText2, FormControl} from "./styledLog";
-import { Input } from '@chakra-ui/react'
-import Saida from "../../components/buttons/exit/sair";
-import Entrar from "../../components/buttons/send/sendButton";
-import { useState } from "react";
+import { Card, Titulo, FormHelperText, FormHelperText2, FormControl, Entrar, Navegar2, Sair, Sair2, Display} from "./styledLog";
+import { useData } from "../../hooks/useData";
+import { useTokenNotNull } from "../../hooks/useTokenNotNull";
+import bye from "../../assets/exit.svg"
+import { TextField } from "@mui/material";
+
 
 function Login() {
     const navigate = useNavigate();
@@ -14,30 +15,39 @@ function Login() {
 
     function goHome() {
       navigate("/")
-  }
+    }
 
-    const goBack = () => {
-        navigate(-1)
-      } 
 
-    const [username, setUsername] = useState('');
+    const {form, onChangeForm, handleSubmit, message} = useData({email:'', password:''},'/user/login');
+
+    useTokenNotNull()
+
     
     return(
-        <Fundo>
+        <Display>
             <Card>
-                <Saida onClick={goBack}/>
-                <FormControl>
+                <Sair>
+                    <Sair2 src={bye}/>
+                </Sair>
+                <FormControl onSubmit={handleSubmit}>
                     <Titulo>Login</Titulo>
-                    <Input type='email' placeholder="Email"/>
-                    <Input type='password' placeholder="Senha"/>
+                    <TextField  id="outlined-basic" label="Email" variant="outlined" 
+                        value={form.email}
+                        onChange={onChangeForm}
+                    />
+                    <TextField  id="outlined-basic" label="Senha" variant="outlined" 
+                        value={form.password}
+                        onChange={onChangeForm}
+                    />
                     <FormHelperText>Não lembro minha senha</FormHelperText>
-                    <Entrar mensage={"Entrar"} onClick={goHome}/>
+                    <Entrar onClick={goHome}>Entrar</Entrar>
                     <FormHelperText2>Ainda não possui um cadastro? 
-                        <a href='cadastro.js' onClick={goCadastro}>Cadastre-se</a>
+                        <Navegar2 onClick={goCadastro}>Cadastre-se</Navegar2>
                     </FormHelperText2>
+                    {message &&  <p>{message} </p>}
                 </FormControl>
             </Card>
-        </Fundo>
+        </Display>
     )
 };
 

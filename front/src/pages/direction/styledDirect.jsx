@@ -5,7 +5,7 @@ export const Fundo = styled.div`
     flex-direction: column; 
     align-items: center; 
     justify-content: space-around; 
-    background: #000; 
+    /* background: #000;  */
     /* height: 100vh; */
 `
 export const Sessao1 = styled.div`
@@ -13,17 +13,20 @@ export const Sessao1 = styled.div`
     flex-direction: row;
     align-items: center; 
     justify-content: space-around; 
+    margin-top: 20px;
+    margin-bottom: 80px;
 `
 
 export const Resumo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 12px;
     gap: 20px;
 `
 export const Textos = styled.text`
-    padding: 10px 10px 10px 10px;
+    align-self: center;
+    padding: 10px 10px 10px 0px;
+    width: 70vw;
     word-break: normal; 
     text-align: justify; 
     line-height: 1.2;
@@ -32,7 +35,6 @@ export const Textos = styled.text`
     font-size: 28px;
 `
 export const Icons = styled.img`
-    color: #fff;
     align-items: center; 
     padding: 4px 4px 4px 4px; 
     margin: auto;
@@ -40,7 +42,7 @@ export const Icons = styled.img`
     height: 44px;
     background: none; 
     border-radius: 2px 2px 2px 2px;
-    /* border: 2px solid #823C9E;  */
+
 `
 
 export const Astronauta = styled.img`

@@ -2,10 +2,8 @@ import React, {useState} from "react";
 import search from '../../assets/search-icon.svg'
 import { Barra, Fundo, Icone, Resultados } from "./styled";
 import {Button, Input} from "@mui/material"
-import {Drawer,DrawerBody, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure} from '@chakra-ui/react'
 import { ButtonSearch, Icon } from "../actions/groupStyled";
 import pesquisa from "../../assets/Seacrch.svg";
-
 
 // const category = 'general'
 // $.ajax({
@@ -23,8 +21,6 @@ import pesquisa from "../../assets/Seacrch.svg";
 
 
 function SearchBar({setResults}) {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const [placement] = React.useState('right')
 
     const [busca, setBusca] = useState("");
     
@@ -33,7 +29,7 @@ function SearchBar({setResults}) {
         fetch('https://api.api-ninjas.com/v1/hobbies?category=')
         .then((response) => response.json())
         .then((json) => {
-            const results = json.filter((hobby) => {
+            const results = busca.filter((hobby) => {
                 return(
                     value &&
                     hobby &&
@@ -52,27 +48,19 @@ function SearchBar({setResults}) {
 
     return(
         <Fundo>
-            <Button onClick={onOpen}>
+            <Button>
                 <ButtonSearch>
                     <Icon src={pesquisa}/>
                 </ButtonSearch>
             </Button>
-            <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-                <DrawerOverlay/>
-                <DrawerContent>
-                    <DrawerCloseButton/>
-                    <DrawerBody>
-                        <Barra>
-                            <Icone src={search} alt="Icone de lupa, indicando busca"/>
-                            <Input placeholder="Qual hobby você procura?"
-                                    value={busca}
-                                    onChange={(ev) => handleChange(ev.target.value)}
-                            />
-                            </Barra>
-                            <Resultados/>
-                    </DrawerBody>
-                </DrawerContent>
-            </Drawer>
+            <Barra>
+                <Icone src={search} alt="Icone de lupa, indicando busca"/>
+                <Input placeholder="Qual hobby você procura?"
+                    value={busca}
+                    onChange={(ev) => handleChange(ev.target.value)}
+                />
+            </Barra>
+            <Resultados/>
         </Fundo>
       
     );

@@ -12,5 +12,5 @@ export const useTokenNotNull = () =>{
         if(token !== null){
             navigate('/')
         }
-    },[])
+    },[navigate])
 }

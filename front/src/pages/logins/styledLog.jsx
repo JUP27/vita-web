@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
-export const Fundo = styled.div`
+export const Display = styled.div`
     display: flex;
     flex-direction: column; 
     align-items: center; 
     padding: 200px;
-    background-color: #1a1a1a;
     height: 50vh; 
 `
 
@@ -51,6 +50,52 @@ export const FormHelperText2 = styled.text`
     a:hover {
         color: white;
     }
+`
+
+export const Entrar = styled.button`
+    position: center;
+    align-self: center;
+    padding: 2px 2px 2px 2px; 
+    width: 7vw;
+    height: 5vh;
+    color: #ffffff; 
+    font-size: 20px;
+    font-weight: 400;
+    border: none; 
+    background: #823C9E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.40);
+
+    button :hover{
+        background-color: #C670E9;
+        color: black;
+    }
+`
+
+
+export const Navegar2 = styled.button`
+    color: #823C9E;
+    background: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    button :hover{
+        color: #fff;
+    }
+`
+export const Sair = styled.button`
+    align-self: flex-end;
+    width: 49px;
+    height: 42px;
+    border: none; 
+    border-radius: 100%;
+    background: transparent;
+`
+export const Sair2 = styled.img`
+    width: 49px;
+    height: 42px;
+    align-self: center;
 `
 
 export const Titulo = styled.div`

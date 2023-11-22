@@ -1,5 +1,5 @@
 import { Astronauta, Fundo, Icons, Resumo, Sessao1, Textos } from "./styledDirect";
-import { Buttons, Present, Purple, Question, SmallTitle } from "../home/styledHome";
+import { Present, Question, SmallTitle } from "../home/styledHome";
 import { Title } from "../about/styleAbout";
 import lost from "../../assets/astronaut_jump.png"
 import game from '../../assets/gameboy.svg'
@@ -26,9 +26,6 @@ function Orientacao() {
                             tem algumas definições das principais áreas de todos 
                             os hobbies espalhados pelo mundo.
                         </SmallTitle>
-                        <Buttons>
-                            <Purple>Descobrir</Purple>
-                        </Buttons>
                     </Present>
                     <Astronauta src={lost}/>
                 </Sessao1>

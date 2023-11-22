@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Fundo = styled.div`
+export const Display = styled.div`
     display: flex; 
     flex-direction: row; 
     align-items: center; 
     justify-content: space-around; 
-    background: #000; 
-    height: 95vh;
+    /* background: #000;  */
+    height: 90vh;
 `
 
 export const Direita = styled.div`
@@ -24,12 +24,9 @@ export const Esquerda = styled.div`
 export const Title = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    text-align: left; 
+    text-align: flex-start; 
     color: #FFF;
-    border-bottom: 2px solid #C670E9;
-    /* border-height: max-content; */
     font-family: Levvic;
     font-size: 42px;
     gap: 10px;

@@ -6,8 +6,8 @@ export const Fundo = styled.div`
     padding: 30px;
     justify-content: space-around;
     align-items: center;
-    height: 100vh; 
-    background-color: #000; 
+    height: 80.5vh; 
+    /* background-color: #000;  */
 `
 
 export const Present = styled.div`
@@ -15,6 +15,7 @@ export const Present = styled.div`
     flex-direction: column; 
     align-items: left;
     justify-content: center; 
+    margin-top: 0px;
     gap: 20px;
 
 `
@@ -31,7 +32,7 @@ export const SmallTitle = styled.div`
 export const Question = styled.div`
     align-items: left; 
     word-break: normal; 
-    width: 36vw;
+    width: 40vw;
     color: #FFF;
     font-family: Levvic;
     font-size: 60px;

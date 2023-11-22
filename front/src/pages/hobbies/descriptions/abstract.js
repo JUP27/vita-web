@@ -1,7 +1,7 @@
 import ActionButtons from "../../../components/actions/group";
 import Comentarios from "../../../components/comment/showcomment/show";
 import Header from "../../../components/header/header";
-import { Fundo } from "../../about/styleAbout";
+import { Display} from "../../about/styleAbout";
 import { DivText } from "../photosStyled";
 import { Titles } from "./abstractStyled";
 
@@ -10,7 +10,7 @@ function Descricao(){
     return(
         <>
             <Header/>
-            <Fundo>
+            <Display>
                 <DivText>
                     <h2>Basquete 
                         {/* criar variavel relacionada com pesquisa */}
@@ -29,7 +29,7 @@ function Descricao(){
                 <Titles>Experiência dos outros usuários</Titles>
                 <Comentarios/>
                 <ActionButtons/>
-            </Fundo>
+            </Display>
         </>
     )
 }

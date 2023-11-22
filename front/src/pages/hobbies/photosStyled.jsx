@@ -5,10 +5,7 @@ export const Fundo = styled.div`
     flex-direction: row;
     justify-items: center;
     justify-content: space-between;
-    background: #000;
     color: #fff;
-    height: 90.5vh;
-
 `
 export const PhotosArea = styled.div`
     display: flex; 
@@ -25,7 +22,7 @@ export const Linha2 = styled.div`
 
 export const Photo = styled.img`
     width: 242px;
-    height: 333px;
+    height: 300px;
 `
 
 export const Atividade = styled.button`

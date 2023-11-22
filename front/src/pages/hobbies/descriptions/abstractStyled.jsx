@@ -13,11 +13,7 @@ export const Titles = styled.text`
     font-size: 40px;
     font-weight: 400;
 `
-// export const Apresentacao = styled.div`
-//     text-align: left;
-//     font-family: Livvic;
-//     font-size: 28px;
-// `
+
 export const HobbieFoto = styled.img`
     width: 15vw;
     height: 16vw; 
