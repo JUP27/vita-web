@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 export const Fundo = styled.div`
+    align-self: flex-end;
     align-items: center;
     margin: 40px;
-    background-color: #000;
+    background: transparent;
+
 `
 
 export const Icon = styled.img`

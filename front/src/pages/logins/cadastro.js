@@ -4,18 +4,24 @@ import { useData } from "../../hooks/useData";
 import { useTokenNotNull } from "../../hooks/useTokenNotNull";
 import bye from "../../assets/exit.svg"
 import { TextField } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 
 function Cadastro() {
     const {form, onChangeForm, handleSubmit, message} = useData({username:'', password:'', email:'', estado:'', idade:'', hobby:''},'/user/cadastro');
+    const navigate = useNavigate();
 
     useTokenNotNull();
+
+    function goHome() {
+        navigate("/")
+    }
 
     return (
         <Display>
         <Card>
             <Sair>
-                <Sair2 src={bye}/>
+                <Sair2 src={bye} onClick={goHome}/>
             </Sair>
             <FormControl onSubmit={handleSubmit}>
                 <Titulo>Cadastro</Titulo>

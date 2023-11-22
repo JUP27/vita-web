@@ -8,6 +8,7 @@ import Cadastro from "../pages/logins/cadastro";
 import Login from "../pages/logins/login";
 import HomePage from '../pages/home/home';
 import {BrowserRouter,Route, Routes } from "react-router-dom";
+import ThankYouPage from "../pages/thanks/thankpage";
 
 function Rota() {
     return (
@@ -22,6 +23,7 @@ function Rota() {
             <Route path="descricao" element={<Descricao/>}/>
             <Route path="orientacao" element={<Orientacao/>}/>
             <Route path="cadastro" element={<Cadastro/>}/>
+            <Route path="thankyoupage" element={<ThankYouPage/>}/>
         </Routes>
        </BrowserRouter>
 

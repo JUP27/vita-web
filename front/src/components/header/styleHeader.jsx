@@ -6,7 +6,7 @@ export const Nav = styled.header`
     justify-content: space-around; 
     align-items: center;
     height: 10vh; 
-    background: #000; 
+    background: #090909; 
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.60);
 `
 
@@ -17,19 +17,6 @@ export const Caminhos = styled.div`
     font-family: Inter;
     justify-content: space-around;
 
-    a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 24px;
-    }
-
-    a:hover {
-        background-color: #C670E9;
-        color: black;
-    }
 `
 export const Navegar = styled.button`
     float: left;
@@ -44,11 +31,13 @@ export const Navegar = styled.button`
     button :hover{
         background-color: #C670E9;
         color: black;
+        cursor: pointer;
     }
 `
+
 export const Logo = styled.img`
     justify-content: flex-start; 
     width: 180px;
     height: 60px;
-    /* border: 2px solid #fff;  */
+
 `

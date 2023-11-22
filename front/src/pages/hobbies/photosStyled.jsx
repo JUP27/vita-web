@@ -11,18 +11,18 @@ export const PhotosArea = styled.div`
     display: flex; 
     flex-direction: row;
     justify-content: flex-start;
-
+    height: 30vh;
 `
+
 export const Linha2 = styled.div`
     display: grid;
     flex-direction: column;
     margin: 0;
-  
 `
 
 export const Photo = styled.img`
     width: 242px;
-    height: 300px;
+    height: 333px;
 `
 
 export const Atividade = styled.button`

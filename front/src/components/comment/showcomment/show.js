@@ -1,15 +1,20 @@
-import { Coment, User, UserComt, UserFoto, UserStar } from "./showStyled";
-import userft from "../../../assets/Perfil.svg"
+import { Coment, User, UserComt, UserFoto } from "./showStyled";
+import userft from "../../../assets/evelyn.svg"
 
 function Comentarios() {
+ 
+
     return(
         <Coment>
             <User>
                 <UserFoto src={userft}/>
-                @nome_usuário
+                @Evelyn_teixeira
             </User>
-            <UserComt>Exemplo de comentário</UserComt>
-            <UserStar/>
+            <UserComt>
+                É mais que um esporte, é um convite para transcender, driblar as adversidades 
+                e enterrar nossos medos. No basquete, encontramos não apenas vitórias, 
+                mas lições de coragem e persistência. 
+            </UserComt>
         </Coment>
     )
 }

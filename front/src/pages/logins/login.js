@@ -3,7 +3,7 @@ import { Card, Titulo, FormHelperText, FormHelperText2, FormControl, Entrar, Nav
 import { useData } from "../../hooks/useData";
 import { useTokenNotNull } from "../../hooks/useTokenNotNull";
 import bye from "../../assets/exit.svg"
-import { TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 
 function Login() {
@@ -13,12 +13,11 @@ function Login() {
         navigate('/cadastro')
     }
 
-    function goHome() {
-      navigate("/")
+    function goThanks() {
+        navigate("/thankyoupage")
     }
 
-
-    const {form, onChangeForm, handleSubmit, message} = useData({email:'', password:''},'/user/login');
+    const {form, onChangeForm, handleSubmit, message} = useData({email:'', password:''},'/login');
 
     useTokenNotNull()
 
@@ -31,16 +30,23 @@ function Login() {
                 </Sair>
                 <FormControl onSubmit={handleSubmit}>
                     <Titulo>Login</Titulo>
-                    <TextField  id="outlined-basic" label="Email" variant="outlined" 
-                        value={form.email}
-                        onChange={onChangeForm}
-                    />
-                    <TextField  id="outlined-basic" label="Senha" variant="outlined" 
-                        value={form.password}
-                        onChange={onChangeForm}
-                    />
+                    <Box component="form"
+                        sx={{
+                            '& .MuiTextField-root': { m: 1, width: '50ch' },
+                        }}
+                        noValidate
+                        autoComplete="off">
+                        <TextField required id="outlined-basic" label="Email" variant="outlined" 
+                            value={form.email}
+                            onChange={onChangeForm}
+                        />
+                        <TextField required id="outlined-basic" label="Senha" variant="outlined" 
+                            value={form.password}
+                            onChange={onChangeForm}
+                        />
+                    </Box>
                     <FormHelperText>Não lembro minha senha</FormHelperText>
-                    <Entrar onClick={goHome}>Entrar</Entrar>
+                    <Entrar onClick={goThanks}>Entrar</Entrar>
                     <FormHelperText2>Ainda não possui um cadastro? 
                         <Navegar2 onClick={goCadastro}>Cadastre-se</Navegar2>
                     </FormHelperText2>

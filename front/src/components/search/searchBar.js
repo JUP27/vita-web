@@ -25,8 +25,7 @@ function SearchBar({setResults}) {
     const [busca, setBusca] = useState("");
     
     const Buscando = (value) => {
-        // fetch('https://api.api-ninjas.com/v1/hobbies?category='+ category)
-        fetch('https://api.api-ninjas.com/v1/hobbies?category=')
+        fetch(`https://api.api-ninjas.com/v1/hobbies?category= + category`)
         .then((response) => response.json())
         .then((json) => {
             const results = busca.filter((hobby) => {
@@ -44,6 +43,7 @@ function SearchBar({setResults}) {
         setBusca(value);
         Buscando(value);
     }
+
     
 
     return(
@@ -67,3 +67,4 @@ function SearchBar({setResults}) {
 };
 
 export default SearchBar;
+
